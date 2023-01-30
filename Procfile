@@ -1,0 +1,1 @@
+web: gunicorn Prediction_of_Startup_Acquisition_Status.wsgi --log-file -

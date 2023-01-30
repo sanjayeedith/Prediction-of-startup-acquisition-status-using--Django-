@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction of Startup Acquisition Status</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="title">Prediction of Startup Acquisition Status</div>
+    <div class="content">
+        <form action="/prediction" method="POST">
+            {% csrf_token %}
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Company Name</span>
+                    <input type="text" name="companyName" placeholder="Enter company name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Company Age</span>
+                    <input type="text" name="companyAge" placeholder="Enter company age" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Country</span>
+                    <select class="form-select" name="country" required>
+                        <option value="" disabled selected hidden>Choose country</option>
+                        <option value="IND">IND</option>
+                        <option value="USA">USA</option>
+                        <option value="AUS">AUS</option>
+                        <option value="NLD">NLD</option>
+                        <option value="ISR">ISR</option>
+                        <option value="GBR">GBR</option>
+                        <option value="ESP">ESP</option>
+                        <option value="CAN">CAN</option>
+                        <option value="FRA">FRA</option>
+                        <option value="DEU">DEU</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Category</span>
+                    <select class="form-select" name="category" required>
+                        <option value="" disabled selected hidden>Choose category</option>
+                        <option value="advertising">advertising</option>
+                        <option value="games_video">games_video</option>
+                        <option value="games_video">games_video</option>
+                        <option value="software">software</option>
+                        <option value="consulting">consulting</option>
+                        <option value="web">web</option>
+                        <option value="ecommerce">ecommerce</option>
+                        <option value="public_relations">public_relations</option>
+                        <option value="enterprise">enterprise</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Total Funding (USD)</span>
+                    <input type="text" name="totalFunding" placeholder="Enter total funding" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Funding Rounds</span>
+                    <input type="text" name="fundingRounds" placeholder="Enter funding rounds" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Milestones</span>
+                    <input type="text" name="milestones" placeholder="Enter total milestones" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Relationships</span>
+                    <input type="text" name="relationships" placeholder="Enter relationships" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Investment Rounds</span>
+                    <input type="text" name="investmentRounds" placeholder="Enter investment rounds" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">ROI</span>
+                    <input type="text" name="ROI" placeholder="Enter ROI value" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Predict">
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
