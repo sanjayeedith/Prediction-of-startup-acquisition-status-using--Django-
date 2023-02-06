@@ -1,4 +1,6 @@
 # Prediction-of-startup-acquisition-status 
+The Prediction of Startup Acquisition Status is a process of determining the likelihood that a startup company will be acquired by another company. This prediction can be based on various factors such as the startup's financial performance, its market position, the state of the economy, and the acquisition history of similar companies. The objective of this prediction is to help investors, stakeholders, and entrepreneurs make informed decisions about investing in or acquiring startups.
+
 The dataset is all about the Startup's Financial Information and we need to predict the current financial status of the company. The database is Crunchbase-2013, database, company, investors and all the other details belong to the company. In this project, we analyzed the company's status i.e, Operating, Acquired, IPO, or closed.
 
 # Understand the Dataset
